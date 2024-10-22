@@ -22,7 +22,9 @@ To build this special feature, we can use a Shelly Pro em 50 module with an appr
 
 
 
-1/ Set your Aeromax in photovoltaic mode (see manual).
+1/ Set your Aeromax in photovoltaic mode (see manual). it shall look like this : 
+
+![aeromax_wiring](https://assistance.thermor.fr/hc/user_images/K7hInjSkgN9oltpZSYqgYQ.png)
 
 2/ Install your Shelly pro (see manuel). 
 
