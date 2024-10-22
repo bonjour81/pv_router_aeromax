@@ -15,7 +15,7 @@ function checkConsumption() {
     let hyst = 800;          // heater will stop  if you have less than 700W (-1500 + 800) extra power  => this value shall be higher than the heater consumption.
         
     if (tempo == "TEMPO_ROUGE") {
-       threshold = -2500;
+       threshold = -2500;    // higher threshold on tempo_red days to have more margin....if you want to avoid any risk, you can just set threshold to extreme value ( ex: -10000 )
        hyst = 800;
     } else {
        threshold = -1500;
