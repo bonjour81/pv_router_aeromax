@@ -6,6 +6,11 @@ When you combine a photovoltaic system with an Aeromax 5, you can use any extra 
 To make this happen, the inverter (the device that converts solar power into usable electricity) needs a special feature. This feature allows it to send a signal to the water heater, telling it to start heating. This signal is a standard 230V-50Hz electrical signal.
 It's important to note that the water heater itself still needs a constant power supply to operate. The extra signal from the inverter simply tells the heater when to use the solar power.
 
+When the PV signal is present, the heater will go up to max temperature (62°C).
+
+Note : once the signal is received, the heater will run minimum for 30min: I guess this is to avoid too many on/off cycles in a day.
+Due to this delay, we may need to consider high trigger threshold, so we have some margin in case of cloud etc..
+
 To build this special feature, we can use a Shelly Pro em 50 module with an appropriate script.
 
 
