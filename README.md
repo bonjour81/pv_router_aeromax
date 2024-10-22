@@ -45,7 +45,7 @@ Follow shelly manuel for setup (wifi etc...).
 
 Once it's done, you may use the script by going to http://<your_shelly_ip>/#/scripts, add a script.
 
-If you use "tempo" from EDF (french provider), you may use script_tempo.js to take more margin on 'red' days.
+If you use "tempo" from EDF (french provider), you may use script_tempo.js to take more margin on 'red' days  (tempo color need to be provided by MQTT)
 
 
 
