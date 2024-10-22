@@ -18,17 +18,21 @@ To build this special feature, we can use a Shelly Pro em 50 module with an appr
 
 
 > [!CAUTION]
-> **Working with mains electricity can be dangerous. Always consult with a qualified electrician before attempting any electrical work.**
-
-
+> **🚨Working with mains electricity can be dangerous. Always consult with a qualified electrician before attempting any electrical work.🚨**
 
 1/ Set your Aeromax in photovoltaic mode (see manual). it shall look like this : 
 
-![aeromax_wiring](https://assistance.thermor.fr/hc/user_images/K7hInjSkgN9oltpZSYqgYQ.png)
+![aeromax_wiring](images/aeromax_wiring.png)
 
 2/ Install your Shelly pro (see manuel). 
 
-3/ use Shelly pro module to provide the 230V signal request by the Aeromax to detect we have extra solar power to use.
+![shellyproem50 wiring](images/SHELLY-Pro-EM-50.webp)
+
+You can consider using the Shelly dry conact to replace the "Gestionnaire Photovoltaique" in the previous diagram.
+
+**🚨Don't forget the 2A protections!🚨**
+
+3/ use Shelly pro module to provide the 230V signal requested by the Aeromax to detect we have extra solar power to use.
 
 
 # The script
