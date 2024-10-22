@@ -24,6 +24,10 @@ To build this special feature, we can use a Shelly Pro em 50 module with an appr
 
 ![aeromax_wiring](images/aeromax_wiring.png)
 
+in the script :
+IA / em0 probe is used for main consumption (clamp around the L wire out of your provider meter)
+IB / em1 probe is used on the heater L wire (not requested for the script, you may use it for something else.
+
 2/ Install your Shelly pro (see manuel). 
 
 ![shellyproem50 wiring](images/SHELLY-Pro-EM-50.webp)
