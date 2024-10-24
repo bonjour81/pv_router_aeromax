@@ -40,14 +40,16 @@ function checkConsumption() {
             print("puissance_active :" + em1.act_power);
         });
         
-        if (injected_power < threshold) {  // if we inject more than "theshold" out of the house, then we turn on the heater
-            Shelly.call("Switch.set", {'id': 0, 'on': true});
-            print("On allume le chauffe-eau");
-        } 
-        if (injected_power > (threshold+hyst)) {  // if we inject less than "theshold+hyst" out of the house (or we don't inject at all, then we turn off the heater
-            Shelly.call("Switch.set", {'id': 0, 'on': false});
-            print("On eteint le chauffe-eau");
-         } 
+        Timer.set(200, false, function() {      // add a 200ms delay to make sure we had time to get the answer of previous shelly calls.
+            if (injected_power < threshold) {  // if we inject more than "theshold" out of the house, then we turn on the heater
+                Shelly.call("Switch.set", {'id': 0, 'on': true});
+                print("On allume le chauffe-eau");
+            } 
+            if (injected_power > (threshold+hyst)) {   // if we inject less than "theshold+hyst" out of the house (or we don't inject at all, then we turn off the heater
+                Shelly.call("Switch.set", {'id': 0, 'on': false});
+                print("On eteint le chauffe-eau");
+             } 
+        }, null);
     } else { // fin IF currentHour 
          Shelly.call("Switch.set", {'id': 0, 'on': false});   // by default, out of production hours, we turn off the signal.
          print("On eteint le chauffe-eau");
